@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Alyce | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Assets/favicon.png">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <img src="Assets\favicon.png" alt="Logo MA" class="logo-imagem">
+            <div class="logo">Maria</div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="profile-box">
+                    <img src="Assets\alyce.JPG" alt="Maria Alyce" class="profile-img">
+                </div>
+                <div class="hero-text">
+                    <h1>Maria Alyce Barreto Bezerra</h1>
+                    <p>Estudante de Análise e Desenvolvimento de Sistemas no IFPB | Trainee em Engenharia de Dados AWS na Compass UOL</p>
+                    <div class="btns">
+                        <a href="https://github.com/alycebarreto" class="btn-primary">GitHub</a>
+                        <a href="https://www.linkedin.com/in/maria-alyce/" class="btn-secondary">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sobre" class="sobre-container">
+            <div class="sobre-card">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Olá! Sou a Maria Alyce.👩🏻‍💻 <p></p>  Estudante de Análise e Desenvolvimento de Sistemas, atualmente no 5º período, com forte afinidade por lógica, algoritmos, estrutura de dados, programação orientada a objetos e banco de dados. Tenho facilidade em raciocínio lógico e gosto de entender o funcionamento dos sistemas, valorizando soluções bem estruturadas, simples e eficientes. <p></p> Já desenvolvi projetos acadêmicos envolvendo APIs, PostgreSQL, PostGIS, Docker e sistemas de gestão, sempre buscando unir organização, clareza e utilidade prática. <p></p> Sou disciplinada, curiosa e acredito que tecnologia bem feita nasce do equilíbrio entre métodos clássicos e inovação. Busco oportunidades para aprender, evoluir e aplicar meus conhecimentos em projetos que resolvam problemas reais.
+                </p>
+                <div class="linha-decorativa"></div>
+            </div>
+        </section>
+        <section id="experiencia" class="container">
+            <h2 class="reveal">Experiência Profissional</h2>
+                <div class="card reveal">
+                        <h3>Trainee em Engenharia de Dados - Compass UOL</h3>
+                        <span class="data">2025 - Atual</span>
+                        <p>Foco em AWS Data Engineering, pipelines de dados e arquitetura em nuvem.</p>
+                    </div>
+                <div class="card reveal">
+                    <h3>Assistente de Gestão / Empreendedora - Julieta's</h3>
+                    <span class="data">2022 - 2025</span>
+                    <p>Liderei a transformação digital e tecnológica da empresa através da implantação completa de um sistema ERP, abrangendo desde a migração de dados até a configuração fiscal, além de estruturar processos de codificação para otimização do estoque. Também atuei na gestão estratégica do e-commerce via Nuvemshop e no desenvolvimento de ferramentas analíticas em planilhas para o controle rigoroso da produção e do desempenho de vendas.</p>
+
+                </div>
+
+                    <div class="card reveal">
+                        <h3>Monitora de Cálculo Diferencial e Integral II - IFPB - Campus Cajazeiras</h3>
+                        <span class="data">2021 - 2022</span>
+                        <p>Apoio a alunos de Engenharia Civil em temas complexos da disciplina.</p>
+                    </div>
+        </section>
+        <section id="projetos" class="container">
+            <h2 class="reveal">Projetos Técnicos</h2>
+            
+            <div class="grid"> <div class="card reveal">
+                <div class="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="Assets\descubralogo.png" class="project-img" >
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Assets/descubra.jpeg" class="project-img" ">
+                            </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(1, this)">&#10095;</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>Descubra+Cajazeiras</h3>
+                        <p>API RESTful utilizando Node.js, Express, MongoDB e Neo4j para mapeamento turístico e relacionamentos espaciais.</p>
+                    </div>
+                </div>
+
+                <div class="card reveal">
+                    <img src="Assets/alfabetizacao.jpeg" alt="Alfabetização Digital" class="project-img">
+                    <div class="project-info">
+                        <h3>Alfabetização Digital para Idosos</h3>
+                        <p>Desenvolvimento de um projeto de pesquisa focado em segurança digital e na prevenção de golpes online para o público idoso.</p>
+                    </div>
+                </div>
+
+        <div class="card reveal">
+            <img src="Assets/reciclo.jpeg" alt="ReCiclo" class="project-img">
+            <div class="project-info">
+                <h3>ReCiclo</h3>
+                <p>Sistema de trocas solidárias com geolocalização utilizando PostgreSQL/PostGIS e Leaflet.js para consultas espaciais de proximidade.</p>
+            </div>
+        </div>
+        <div class="card reveal">
+            <img src="Assets/guiaR.png" alt="Análise em R" class="project-img">
+            <div class="project-info">
+                <h3>Guia de Análise de Redes em R</h3>
+                <p>Desenvolvimento de pipeline automatizado para extração de dados e cálculo de métricas de tráfego (Dimensão Fractal) em servidores web.</p>
+            </div>
+        </div>
+
+    </div> </section>
+            <section id="contato" class="contato-container">
+            <div class="conteudo-contato">
+                <h2>Vamos conversar?</h2>
+                <p>Estou disponível para novos projetos e oportunidades na área de Engenharia de Dados.</p>
+                
+                <div class="links-contato">
+                    <a href="https://wa.me/558393775201" target="_blank" class="card-contato">
+                        <span>📱</span>
+                        <h3>WhatsApp</h3>
+                    <a href="mailto:barretomalyce@gmail.com" class="card-contato">
+                        <span>📧</span> <h3>Email</h3>
+                    </a>
+                    <a href="https://linkedin.com/in/maria-alyce" target="_blank" class="card-contato">
+                        <span>🔗</span>
+                        <h3>LinkedIn</h3>
+                    </a>
+                    <a href="https://github.com/alycebarreto" target="_blank" class="card-contato">
+                        <span>💻</span>
+                        <h3>GitHub</h3>
+                    </a>
+                </div>
+            </div>
+            
+            <footer class="rodape">
+                <p>Desenvolvido por Maria Alyce © 2025</p>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
