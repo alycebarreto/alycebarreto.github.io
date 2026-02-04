@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #e6e6e6;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); 
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #0f172a;
+    letter-spacing: -1px; 
+    cursor: pointer;
+}
+
+.logo::after {
+    content: "Alyce";
+    font-weight: 800; 
+    color: #f1227e; 
+    margin-left: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f1227e;
+}
+
+#hero {
+    background: #f1227e;
+    color: white;
+    padding: 80px 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.2);
+    object-fit: cover;
+    background-color: #ffffff; 
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero-text p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+.btn-primary {
+    background: transparent;
+    color: white;
+    margin-right: 15px;
+    border: 2px solid white;
+}
+.btn-primary:hover {
+    background: #f0f0f0;
+    color: #f1227e;
+}
+.btn-secondary {
+    background: transparent;
+    color: white;
+    margin-right: 15px;
+    border: 2px solid white;
+}
+.btn-secondary:hover {
+    background: white;
+    color: #f1227e;
+}   
+
+.container {
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 20px 20px 10px 20px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-top: 0; 
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 50px; 
+    margin: 0 auto 50px auto;
+    color: #414141;
+}
+.container h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f1227e;
+    margin: 10px auto 0; 
+    margin-top: 10px;    
+    margin-bottom: 30px; 
+    border-radius: 2px;
+}
+.card:last-child {
+    margin-bottom: 0 !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; 
+    margin-top: 0;
+}
+
+.card, .project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.card h3, .project-card h3 {
+    color: #f1227e; 
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.card .data {
+    display: block;
+    color: #414141;
+    font-size: 1rem;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links { display: none; }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1s ease, transform 0.8s ease;
+    visibility: hidden; 
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    align-items: stretch; 
+    margin-top: 50px;
+}
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #eee;
+}
+
+.project-info {
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: #f1227e;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img, .carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f1227e; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: #f1227e;
+}
+
+.marca-container {
+    display: flex;          
+    align-items: center;  
+    text-decoration: none;  
+    color: inherit;        
+}
+
+.logo-imagem {
+    height: 40px;           /* Define a altura do logo. AJUSTE ESTE VALOR conforme necessário */
+    width: auto;            /* Mantém a proporção correta da imagem */
+    margin-right: 12px;    
+}
+
+/* --- Estilos para o Texto (para garantir que não quebre) --- */
+.logo-texto {
+    font-weight: bold;      /* Garante que o texto continue em negrito */
+    /* Se o texto estiver muito grande ou pequeno, ajuste o font-size aqui */
+    /* font-size: 1.5rem; */ 
+}
+/* --- Container Principal de Contato --- */
+.contato-container {
+    background-color: #ffffff; /* Fundo branco para limpar visualmente */
+    padding: 60px 20px 20px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza todo o texto */
+}
+
+.conteudo-contato h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.conteudo-contato p {
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;  /* Esses dois margins auto */
+    margin-right: auto; /* centralizam o bloco de texto */
+}
+
+/* --- Área dos Links (Flexbox) --- */
+.links-contato {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 30px; /* Espaço entre os botões */
+    flex-wrap: wrap; /* Permite quebrar linha em celular */
+    margin-bottom: 60px;
+}
+
+/* --- O "Card" do botão --- */
+.card-contato {
+    background-color: #f9f9f9;
+    border: 2px solid transparent; /* Borda invisível para o hover */
+    border-radius: 12px;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s; /* Suaviza a animação */
+    min-width: 120px;
+}
+
+.card-contato span {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card-contato h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* --- Efeito ao passar o mouse (Hover) --- */
+.card-contato:hover {
+    border-color: #e11d88; /* Aquele rosa do seu site */
+    color: #e11d88;
+    background-color: #fff0f7; /* Um rosa bem clarinho de fundo */
+    transform: translateY(-5px); /* O botão "sobe" um pouquinho */
+    box-shadow: 0 5px 15px rgba(225, 29, 136, 0.2); /* Sombra rosa suave */
+}
+
+/* --- Rodapé final --- */
+.rodape {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+/* Container que segura a seção inteira */
+.sobre-container {
+    background-color: #f4f4f4; /* Mesmo cinza claro do fundo da experiência para continuidade */
+    padding: 40px 20px;       /* Espaço em cima e embaixo */
+    display: flex;
+    justify-content: center;
+}
+
+/* O "Cartão" branco onde fica o texto */
+.sobre-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 700px;         /* Não deixa ficar muito largo */
+    padding: 40px;
+    border-radius: 20px;      /* Bordas arredondadas modernas */
+    text-align: center;       /* Texto centralizado */
+    
+    /* Uma sombra suave para dar destaque */
+    box-shadow: 0 10px 30px rgba(225, 29, 136, 0.15); 
+    
+    /* Opcional: Se quiser que ele "suba" um pouco para cima do cabeçalho rosa,
+       descomente a linha abaixo: */
+    /* margin-top: -60px; */ 
+    /* position: relative; */
+}
+
+.sobre-card h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.sobre-card p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Pequeno detalhe rosa abaixo do texto */
+.linha-decorativa {
+    width: 60px;
+    height: 4px;
+    background-color: #e11d88; /* Seu rosa */
+    margin: 25px auto 0 auto;  /* Centraliza a linha */
+    border-radius: 2px;
+}
+
+.skills-container h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* GRID RESPONSIVO: Garante colunas lado a lado no PC */
+.skills-grid {
+    display: grid;
+    /* 280px ajuda a caber 3 cards mesmo em notebooks menores */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px; /* Largura máxima para não esticar demais */
+    margin: 0 auto;    /* Centraliza o grid na tela */
+    padding: 0 10px;   /* Pequena folga lateral */
+}
+
+/* Estilo do Card Individual */
+.skill-card {
+    background: #ffffff; /* Card Branco */
+    border: 1px solid #eee;
+    border-left: 5px solid #e11d88; /* Detalhe lateral rosa */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    height: 100%; /* Garante altura igual para todos */
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(225, 29, 136, 0.15);
+    border-color: #ffe6f2;
+}
+
+.skill-card h3 {
+    color: #e11d88;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Tags (Pílulas) dentro do card */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    background-color: #fff0f7;
+    color: #e11d88;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
